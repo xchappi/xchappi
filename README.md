@@ -17,8 +17,6 @@
 
 <br />
 
-### Skills:
-
 ### Frontend Skills:
 
 <img align="left" alt="JavaScript" width="34px" src="https://github.com/xchappi/xchappi/blob/master/imgs/javascript.png" />
