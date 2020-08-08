@@ -26,6 +26,7 @@
 <img align="left" alt="CSS3" width="26px" src="https://github.com/xchappi/xchappi/blob/master/imgs/css.png" />
 <img align="left" alt="Sass" width="26px" src="https://github.com/xchappi/xchappi/blob/master/imgs/sass.png" />
 <img align="left" alt="Angular" width="26px" src="https://github.com/xchappi/xchappi/blob/master/imgs/angular.png" />
+<br />
 
 ### Backend Skills:
 
@@ -33,6 +34,7 @@
 <img align="left" alt="MongoDB" width="26px" src="https://github.com/xchappi/xchappi/blob/master/imgs/mongodb.png" />
 <img align="left" alt="Java" width="26px" src="https://github.com/xchappi/xchappi/blob/master/imgs/java.png" />
 <img align="left" alt="Spring" width="26px" src="https://github.com/xchappi/xchappi/blob/master/imgs/spring.png" />
+<br />
 
 ### Misc Skills
 
