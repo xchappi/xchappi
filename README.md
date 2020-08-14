@@ -30,8 +30,7 @@
 
 <img align="left" alt="MongoDB" width="44px" height="44px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/mongodb.png" />
 <img align="left" alt="Java" width="44px" height="44px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/java.png" />
-<img align="left" alt="Spring" width="44px" height="44px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/spring.png" />
-<br />
+<img align="left" alt="Spring" width="44px" height="50px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/spring.png" />
 <br />
 
 Learning: <br/>
