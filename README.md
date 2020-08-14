@@ -28,10 +28,13 @@
 
 ### Backend Skills:
 
-<img align="left" alt="Node.js" width="34px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/nodejs.png" />
 <img align="left" alt="MongoDB" width="44px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/mongodb.png" />
 <img align="left" alt="Java" width="44px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/java.png" />
 <img align="left" alt="Spring" width="44px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/spring.png" />
+<br />
+
+Learning: 
+<img align="left" alt="Node.js" width="34px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/nodejs.png" />
 <br />
 
 ### Misc Skills
