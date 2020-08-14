@@ -1,4 +1,4 @@
-### Hi!!, I'm Javi - aka xChappi 👋
+### Hi!!, I'm Javier Cancela - aka xChappi 👋
 
 ## Football, Gaming, Develop... Not sure in that order
 
