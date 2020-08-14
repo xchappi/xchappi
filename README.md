@@ -33,7 +33,7 @@
 <img align="left" alt="Spring" width="44px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/spring.png" />
 <br />
 
-Learning: 
+Learning: <br/>
 <img align="left" alt="Node.js" width="34px" src="https://github.com/xchappi/xchappi/blob/master/.imgs/nodejs.png" />
 <br />
 
