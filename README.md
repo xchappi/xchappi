@@ -4,7 +4,7 @@
 
 - 🔭 I’m currently working on some private projects, trying to start working in some OS Projects I'll try to publish here when I start (: !
 - 🌱 I’m currently trying to increase my tech stack learning some ReactJS, Python... and other stuff you'll see
-- 🥅 2021 Goals:
+- 🥅 2023 Goals:
   - Make my personal portfolio with some "learning oriented" projects
   - Start contributing to Open Source projects
   - Start creating content on Youtube/Other platforms (probably in spanish)
