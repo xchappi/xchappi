@@ -1,0 +1,71 @@
+---
+const skills = [
+	{ name: "JavaScript", level: 90 },
+	{ name: "TypeScript", level: 85 },
+	{ name: "React", level: 88 },
+	{ name: "Node.js", level: 82 },
+	{ name: "Python", level: 75 },
+	{ name: "Git", level: 80 },
+	{ name: "HTML5", level: 95 },
+	{ name: "CSS3", level: 92 },
+	{ name: "Astro", level: 70 }
+];
+---
+
+<section id="skills" class="content-section">
+	<h2 class="section-title">Skills</h2>
+	<div class="skills-container">
+		{skills.map(skill => (
+			<div class="skill-item">
+				<span class="skill-name">{skill.name}</span>
+				<div class="skill-bar">
+					<div class="skill-level" style={`width: ${skill.level}%`}></div>
+				</div>
+			</div>
+		))}
+	</div>
+</section>
+
+<style>
+	.skills-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+	.skill-item {
+		display: flex;
+		align-items: center;
+	}
+	.skill-name {
+		flex: 0 0 100px;
+		font-size: 0.7em;
+	}
+	.skill-bar {
+		flex: 1;
+		height: 15px;
+		background-color: var(--secondary-bg);
+		border: 1px solid var(--accent-color);
+		position: relative;
+		overflow: hidden;
+	}
+	.skill-level {
+		height: 100%;
+		background-color: var(--accent-color);
+		position: relative;
+	}
+	.skill-level::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: repeating-linear-gradient(
+			45deg,
+			transparent,
+			transparent 5px,
+			rgba(0,0,0,0.1) 5px,
+			rgba(0,0,0,0.1) 10px
+		);
+	}
+</style>

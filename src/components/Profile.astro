@@ -1,0 +1,42 @@
+---
+---
+<section id="profile" class="content-section">
+	<h2 class="section-title">Profile</h2>
+	<div class="profile-content">
+		<p>Full-stack developer with a passion for creating innovative web and mobile applications.</p>
+		<ul>
+			<li>Front-end and back-end web development</li>
+			<li>Intuitive user interface design</li>
+			<li>Performance optimization and scalability</li>
+			<li>Microservices architecture implementation</li>
+		</ul>
+	</div>
+</section>
+
+<style>
+	.profile-content {
+		background-color: var(--secondary-bg);
+		padding: 15px;
+		border: 1px solid var(--accent-color);
+	}
+	p {
+		font-size: 0.8em;
+		margin-bottom: 15px;
+	}
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	li {
+		font-size: 0.7em;
+		margin-bottom: 10px;
+		padding-left: 20px;
+		position: relative;
+	}
+	li::before {
+		content: '►';
+		position: absolute;
+		left: 0;
+		color: var(--accent-color);
+	}
+</style>

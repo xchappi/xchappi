@@ -1,0 +1,52 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portfolio de xchappi - Programador" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="game-container">
+			<slot />
+		</div>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--main-bg: #0a1f0a;
+		--text-color: #33ff33;
+		--accent-color: #66ff66;
+		--secondary-bg: #0f2f0f;
+	}
+	html, body {
+		font-family: 'Press Start 2P', cursive;
+		background-color: var(--main-bg);
+		color: var(--text-color);
+		margin: 0;
+		padding: 0;
+		line-height: 1.6;
+	}
+	.game-container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: var(--main-bg);
+		border: 2px solid var(--accent-color);
+		box-shadow: 0 0 10px var(--accent-color);
+	}
+	* {
+		box-sizing: border-box;
+	}
+</style>

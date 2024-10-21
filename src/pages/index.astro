@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Menu from '../components/Menu.astro';
+import Profile from '../components/Profile.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Objectives from '../components/Objectives.astro';
+---
+
+<Layout title="xchappi - Portfolio de Programador RPG">
+	<main>
+		<Header />
+		<Menu />
+		<div class="content">
+			<Profile />
+			<Skills />
+			<Projects />
+			<Objectives />
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding: 20px;
+	}
+	.content {
+		margin-top: 40px;
+	}
+	:global(.content-section) {
+		margin-bottom: 40px;
+		display: none;
+	}
+	:global(.section-title) {
+		font-size: 1.2em;
+		color: var(--accent-color);
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', (event) => {
+		const menuLinks = document.querySelectorAll('.menu a');
+		const sections = document.querySelectorAll('.content-section');
+
+		// Show the first section by default
+		if (sections.length > 0) {
+			sections[0].style.display = 'block';
+		}
+
+		menuLinks.forEach(link => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				const targetId = link.getAttribute('href').substring(1);
+				sections.forEach(section => {
+					section.style.display = section.id === targetId ? 'block' : 'none';
+				});
+			});
+		});
+	});
+</script>

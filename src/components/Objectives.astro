@@ -1,0 +1,40 @@
+---
+const objectives = [
+	"Master React Native app development",
+	"Contribute to open-source projects",
+	"Learn AI and machine learning",
+	"Launch a mobile app on app stores"
+];
+---
+<section id="objectives" class="content-section">
+	<h2 class="section-title">Annual Objectives</h2>
+	<ul class="objectives-list">
+		{objectives.map(objective => (
+			<li class="objective-item">{objective}</li>
+		))}
+	</ul>
+</section>
+
+<style>
+	.objectives-list {
+		list-style-type: none;
+		padding-left: 0;
+		background-color: var(--secondary-bg);
+		padding: 15px;
+		border: 1px solid var(--accent-color);
+	}
+	.objective-item {
+		margin-bottom: 15px;
+		font-size: 0.8em;
+		padding-left: 25px;
+		position: relative;
+	}
+	.objective-item::before {
+		content: "✦";
+		color: var(--accent-color);
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+</style>

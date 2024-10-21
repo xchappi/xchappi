@@ -1,0 +1,141 @@
+---
+const menuItems = [
+	{ name: "Profile", link: "#profile" },
+	{ name: "Skills", link: "#skills" },
+	{ name: "Quests", link: "#quests" },
+	{ name: "Objectives", link: "#objectives" }
+];
+---
+
+<nav class="menu">
+	<button class="menu-toggle" aria-label="Toggle menu">
+		<span class="menu-icon">MENU</span>
+	</button>
+	<ul class="menu-items">
+		{menuItems.map((item) => (
+			<li>
+				<a href={item.link}>
+					<span class="menu-item-icon">►</span>
+					{item.name}
+				</a>
+			</li>
+		))}
+	</ul>
+</nav>
+
+<style>
+	.menu {
+		margin-top: 40px;
+		background-color: var(--secondary-bg);
+		padding: 10px;
+		border: 2px solid var(--accent-color);
+		position: relative;
+	}
+	.menu-toggle {
+		display: none;
+		background-color: var(--accent-color);
+		color: var(--main-bg);
+		border: none;
+		padding: 10px 20px;
+		font-family: 'Press Start 2P', cursive;
+		font-size: 0.8em;
+		cursor: pointer;
+		text-transform: uppercase;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 0 darken(var(--accent-color), 10%);
+	}
+	.menu-toggle:hover {
+		background-color: lighten(var(--accent-color), 10%);
+	}
+	.menu-toggle:active {
+		box-shadow: 0 2px 0 darken(var(--accent-color), 10%);
+		transform: translateY(2px);
+	}
+	.menu-items {
+		list-style-type: none;
+		padding: 0;
+		display: flex;
+		justify-content: space-around;
+	}
+	li {
+		margin: 0 10px;
+	}
+	a {
+		color: var(--text-color);
+		text-decoration: none;
+		font-size: 0.8em;
+		display: flex;
+		align-items: center;
+		transition: color 0.3s ease;
+	}
+	a:hover {
+		color: var(--accent-color);
+	}
+	.menu-item-icon {
+		margin-right: 5px;
+		color: var(--accent-color);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	a:hover .menu-item-icon {
+		opacity: 1;
+	}
+
+	@media (max-width: 768px) {
+		.menu-toggle {
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.menu-items {
+			display: none;
+			flex-direction: column;
+		}
+		.menu-items.show {
+			display: flex;
+		}
+		li {
+			margin: 10px 0;
+		}
+		a {
+			padding: 10px;
+			background-color: var(--secondary-bg);
+			border: 1px solid var(--accent-color);
+			margin-bottom: 5px;
+			transition: all 0.3s ease;
+		}
+		a:hover {
+			background-color: var(--accent-color);
+			color: var(--main-bg);
+		}
+	}
+</style>
+
+<script>
+	function setupMenu() {
+		const menuToggle = document.querySelector('.menu-toggle');
+		const menuItems = document.querySelector('.menu-items');
+
+		if (menuToggle && menuItems) {
+			menuToggle.addEventListener('click', () => {
+				menuItems.classList.toggle('show');
+			});
+
+			const menuLinks = document.querySelectorAll('.menu-items a');
+			menuLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					if (window.innerWidth <= 768) {
+						menuItems.classList.remove('show');
+					}
+				});
+			});
+		}
+	}
+
+	// Ejecutar en la carga inicial
+	document.addEventListener('DOMContentLoaded', setupMenu);
+
+	// Ejecutar en navegaciones subsiguientes
+	document.addEventListener('astro:page-load', setupMenu);
+</script>

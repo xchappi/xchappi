@@ -1,0 +1,19 @@
+{
+  "name": "@example/basics",
+  "type": "es5",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "context": "node ./scripts/recopilar_contexto.js"
+  },
+  "dependencies": {
+    "astro": "^4.15.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
