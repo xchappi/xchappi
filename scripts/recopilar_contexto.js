@@ -53,7 +53,7 @@ async function saveToFile(fileContents, outputFile) {
 
 async function main() {
   
-  const outputFile = 'app_context.txt';
+  const outputFile = 'context/app_context.txt';
 
   try {
     const fileContents = await collectFiles('./');
