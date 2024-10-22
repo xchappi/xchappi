@@ -1,27 +1,50 @@
 ---
 ---
 <section id="profile" class="content-section">
-	<h2 class="section-title">Profile</h2>
+	<h2 class="section-title">Perfil</h2>
 	<div class="profile-content">
-		<p>Full-stack developer with a passion for creating innovative web and mobile applications.</p>
-		<ul>
-			<li>Front-end and back-end web development</li>
-			<li>Intuitive user interface design</li>
-			<li>Performance optimization and scalability</li>
-			<li>Microservices architecture implementation</li>
-		</ul>
+		<p class="main-description">Nivel 29, portador de las artes ancestrales del desarrollo web, equipado con un conjunto versátil de habilidades y una insaciable búsqueda de conocimiento en IA y tecnologías emergentes.</p>
+		<div class="character-stats">
+			<h3>Estadísticas del Personaje</h3>
+			<ul>
+				<li>Maestría Frontend: Experto en crear interfaces de usuario responsivas e interactivas usando frameworks modernos y JavaScript puro</li>
+				<li>Conocimiento Full-Stack: Equipado con conocimientos de backend para una integración fluida y flujo de desarrollo óptimo</li>
+				<li>Entusiasta de la IA: Actualmente explorando los reinos de la inteligencia artificial y el aprendizaje automático</li>
+				<li>Explorador Tech: En constante búsqueda de nuevas tecnologías y frameworks para mejorar las capacidades de desarrollo</li>
+				<li>Resolución de Problemas: Especializado en debugging, optimización y creación de soluciones eficientes</li>
+			</ul>
+		</div>
+		<div class="special-traits">
+			<h3>Rasgos Especiales</h3>
+			<ul>
+				<li>Aprendizaje rápido con curiosidad natural por las tecnologías emergentes</li>
+				<li>Experiencia en conectar los reinos del backend y el frontend</li>
+				<li>Apasionado por el código limpio y las mejores prácticas</li>
+			</ul>
+		</div>
 	</div>
 </section>
 
 <style>
 	.profile-content {
 		background-color: var(--secondary-bg);
-		padding: 15px;
+		padding: 20px;
 		border: 1px solid var(--accent-color);
 	}
-	p {
+	.main-description {
 		font-size: 0.8em;
-		margin-bottom: 15px;
+		margin-bottom: 25px;
+		line-height: 1.8;
+		border-bottom: 1px dashed var(--accent-color);
+		padding-bottom: 15px;
+	}
+	h3 {
+		font-size: 0.8em;
+		color: var(--accent-color);
+		margin: 20px 0 15px 0;
+	}
+	.character-stats, .special-traits {
+		margin-top: 20px;
 	}
 	ul {
 		list-style-type: none;
@@ -29,14 +52,18 @@
 	}
 	li {
 		font-size: 0.7em;
-		margin-bottom: 10px;
+		margin-bottom: 12px;
 		padding-left: 20px;
 		position: relative;
+		line-height: 1.6;
 	}
 	li::before {
 		content: '►';
 		position: absolute;
 		left: 0;
 		color: var(--accent-color);
+	}
+	.special-traits li::before {
+		content: '✦';
 	}
 </style>

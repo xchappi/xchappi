@@ -1,28 +1,44 @@
 ---
 const skills = [
+	{ name: "Angular", level: 99 },
 	{ name: "JavaScript", level: 90 },
-	{ name: "TypeScript", level: 85 },
-	{ name: "React", level: 88 },
-	{ name: "Node.js", level: 82 },
-	{ name: "Python", level: 75 },
-	{ name: "Git", level: 80 },
-	{ name: "HTML5", level: 95 },
-	{ name: "CSS3", level: 92 },
-	{ name: "Astro", level: 70 }
+	{ name: "TypeScript", level: 90 },
+	{ name: "React", level: 70 },
+	{ name: "Nodejs", level: 80 },
+	{ name: "CSS", level: 70 },
+	{ name: "Java", level: 60 },
+	{ name: "Nextjs", level: 30 },
+	{ name: "Astro", level: 20 }
 ];
+
+// Función para determinar el nivel de maestría
+function getMasteryLevel(level: number) {
+	if (level >= 90) return { text: "S-TIER", class: "s-tier" };
+	if (level >= 70) return { text: "A-TIER", class: "a-tier" };
+	if (level >= 40) return { text: "B-TIER", class: "b-tier" };
+	return { text: "C-TIER", class: "c-tier" };
+}
 ---
 
 <section id="skills" class="content-section">
 	<h2 class="section-title">Skills</h2>
 	<div class="skills-container">
-		{skills.map(skill => (
-			<div class="skill-item">
-				<span class="skill-name">{skill.name}</span>
-				<div class="skill-bar">
-					<div class="skill-level" style={`width: ${skill.level}%`}></div>
+		{skills.map(skill => {
+			const mastery = getMasteryLevel(skill.level);
+			return (
+				<div class="skill-item">
+					<span class="skill-name">{skill.name}</span>
+					<div class="skill-bar">
+						<div 
+							class={`skill-level ${mastery.class}`} 
+							style={`width: ${skill.level}%`}
+						>
+							<span class="mastery-text">{mastery.text}</span>
+						</div>
+					</div>
 				</div>
-			</div>
-		))}
+			);
+		})}
 	</div>
 </section>
 
@@ -31,6 +47,9 @@ const skills = [
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 15px;
+		background-color: var(--secondary-bg);
+		padding: 20px;
+		border: 1px solid var(--accent-color);
 	}
 	.skill-item {
 		display: flex;
@@ -42,7 +61,7 @@ const skills = [
 	}
 	.skill-bar {
 		flex: 1;
-		height: 15px;
+		height: 20px;
 		background-color: var(--secondary-bg);
 		border: 1px solid var(--accent-color);
 		position: relative;
@@ -50,8 +69,31 @@ const skills = [
 	}
 	.skill-level {
 		height: 100%;
-		background-color: var(--accent-color);
 		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: width 0.3s ease;
+	}
+	.mastery-text {
+		font-size: 0.6em;
+		color: var(--main-bg);
+		z-index: 1;
+		text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+		white-space: nowrap;
+	}
+	/* Estilos para cada tier */
+	.s-tier {
+		background: linear-gradient(45deg, #FFD700, #FFA500); /* Dorado brillante */
+	}
+	.a-tier {
+		background: linear-gradient(45deg, #FF0000, #FF4500); /* Rojo intenso */
+	}
+	.b-tier {
+		background: linear-gradient(45deg, #4169E1, #1E90FF); /* Azul real */
+	}
+	.c-tier {
+		background: linear-gradient(45deg, #32CD32, #90EE90); /* Verde */
 	}
 	.skill-level::after {
 		content: '';
@@ -67,5 +109,34 @@ const skills = [
 			rgba(0,0,0,0.1) 5px,
 			rgba(0,0,0,0.1) 10px
 		);
+	}
+
+	/* Efecto de brillo para S-Tier */
+	.s-tier::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 50%;
+		height: 100%;
+		background: linear-gradient(
+			90deg,
+			transparent,
+			rgba(255, 255, 255, 0.3),
+			transparent
+		);
+		animation: shine 2s infinite;
+	}
+
+	@keyframes shine {
+		0% {
+			left: -100%;
+		}
+		20% {
+			left: 100%;
+		}
+		100% {
+			left: 100%;
+		}
 	}
 </style>
